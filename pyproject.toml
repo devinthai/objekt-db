@@ -1,0 +1,12 @@
+[project]
+name = "objekt-db"
+version = "0.1.0"
+authors = [
+    {name="Devin Thai", email="devin.thai.5@gmail.com"},
+]
+description = "Data models for objekt tracking database."
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "sqlalchemy>=2.0.46",
+]
