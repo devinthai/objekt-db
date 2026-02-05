@@ -1,24 +1,23 @@
 from db.base import Base
-from sqlalchemy import Integer, DateTime
-from sqlalchemy.orm import mapped_column, Mapped
-from datetime import datetime
+from sqlalchemy import Integer, String, DateTime
+from sqlalchemy.orm import mapped_column
 
 class Slugs(Base):
     __tablename__ = 'slugs'
 
     id = mapped_column(Integer, primary_key=True)
-    slugId = Mapped[str]
-    createdAt = Mapped[datetime]
-    slugString = Mapped[str]
-    collectionId = Mapped[str]
-    season = Mapped[str]
-    member = Mapped[str]
-    artist = Mapped[str]
-    collectionNo = Mapped[str]
-    className = Mapped[str]
-    frontImage = Mapped[str]
-    backImage = Mapped[str]
-    backgroundColor = Mapped[str]
-    textColor = Mapped[str]
-    onOffline = Mapped[str]
-    bandImageUrl = Mapped[str]
+    slugId = mapped_column(String)
+    createdAt = mapped_column(DateTime(timezone=True))
+    slugString = mapped_column(String)
+    collectionId = mapped_column(String)
+    season = mapped_column(String)
+    member = mapped_column(String)
+    artist = mapped_column(String)
+    collectionNo = mapped_column(String)
+    className = mapped_column(String)
+    frontImage = mapped_column(String)
+    backImage = mapped_column(String)
+    backgroundColor = mapped_column(String)
+    textColor = mapped_column(String)
+    onOffline = mapped_column(String)
+    bandImageUrl = mapped_column(String)

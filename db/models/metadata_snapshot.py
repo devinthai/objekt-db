@@ -1,15 +1,14 @@
 from db.base import Base
-from sqlalchemy.orm import Mapped, mapped_column
-from sqlalchemy import Integer 
-from datetime import datetime
+from sqlalchemy.orm import mapped_column
+from sqlalchemy import Integer, String, DateTime
 
 class MetadataSnapshot(Base):
     __tablename__ = "metadata_snapshots"
 
     id = mapped_column(Integer, primary_key=True)
-    slug = Mapped[str]
-    total = Mapped[int]
-    spin = Mapped[int]
-    transferable = Mapped[int]
-    snapshotTimestamp = Mapped[datetime]
+    slug = mapped_column(String)
+    total = mapped_column(String)
+    spin = mapped_column(String)
+    transferable = mapped_column(String)
+    snapshotTimestamp = mapped_column(DateTime(timezone = True))
 
