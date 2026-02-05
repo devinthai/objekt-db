@@ -7,8 +7,8 @@ class MetadataSnapshot(Base):
 
     id = mapped_column(Integer, primary_key=True)
     slug = mapped_column(String)
-    total = mapped_column(String)
-    spin = mapped_column(String)
-    transferable = mapped_column(String)
+    total = mapped_column(Integer)
+    spin = mapped_column(Integer)
+    transferable = mapped_column(Integer)
     snapshotTimestamp = mapped_column(DateTime(timezone = True))
 
