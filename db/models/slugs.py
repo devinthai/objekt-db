@@ -6,7 +6,7 @@ class Slugs(Base):
     __tablename__ = 'slugs'
 
     id = mapped_column(Integer, primary_key=True)
-    slugId = mapped_column(String)
+    slugId = mapped_column(String, unique=True)
     createdAt = mapped_column(DateTime(timezone=True))
     slugString = mapped_column(String)
     collectionId = mapped_column(String)
