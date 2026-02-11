@@ -21,3 +21,4 @@ class Slugs(Base):
     textColor = mapped_column(String)
     onOffline = mapped_column(String)
     bandImageUrl = mapped_column(String)
+    workBatch = mapped_column(Integer)
